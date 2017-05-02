@@ -19,7 +19,7 @@ export class MovieService {
 
     getLatestMovies(){
         // tslint:disable-next-line:max-line-length
-        return this._jsonp.get('http://api.themoviedb.org/3/movie/upcoming?callback=JSONP_CALLBACK&primary_release_date.gte=2017-01-01&primary_release_date.lte=2016-07-02&sort_by=popularity.desc&api_key=' + this.apiKey)
+        return this._jsonp.get('https://api.themoviedb.org/3/movie/upcoming?callback=JSONP_CALLBACK&primary_release_date.gte=2017-01-01&primary_release_date.lte=2016-07-02&sort_by=popularity.desc&api_key=' + this.apiKey)
                 .map(result => result.json());
     }
 
